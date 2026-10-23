@@ -42,7 +42,7 @@ window.__ModuleLoader__.load({
       .mm-tool { display:inline-flex; align-items:center; gap:5px; padding:5px 8px; border-radius:7px; border:1px solid var(--dsw-alias-border-l1); background:var(--dsw-alias-bg-base); font-family:ui-monospace,Consolas,monospace; font-size:10.5px; color:var(--dsw-alias-label-secondary); }
       .mm-tool svg { width:11px; height:11px; color:var(--dsw-alias-state-success-primary); }
       .mm-toggle-row { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
-      .mm-toggle { position:relative; width:38px; height:22px; flex:0 0 38px; border:0; border-radius:999px; background:var(--dsw-alias-bg-layer-2); cursor:pointer; padding:0; }
+      .mm-toggle { position:relative; width:38px; height:22px; flex:0 0 38px; border:0; border-radius:999px; background:color-mix(in srgb, var(--dsw-alias-label-primary) 18%, transparent); cursor:pointer; padding:0; }
       .mm-toggle::after { content:''; position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:999px; background:var(--dsw-alias-bg-base); box-shadow:0 1px 2px rgba(0,0,0,.18); transition:transform .15s ease; }
       .mm-toggle[data-on="true"] { background:var(--dsw-alias-brand-primary); }
       .mm-toggle[data-on="true"]::after { transform:translateX(16px); }
