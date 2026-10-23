@@ -11,6 +11,27 @@
 - 只读：插件不上传、不修改、不删除任何图片；成人向与标签过滤器仍由 MeMeMio 网页的「设置 → MCP 接入」控制。
 - 本地优先：设置页与 Host 之间的 API 仅接受 loopback + 同源请求，令牌不会回传到浏览器（只回掩码）。
 
+## 界面
+
+设置 → **MeMeMio 表情包**，先填站点地址与只读令牌：
+
+![首次接入](docs/screenshots/01-settings-empty.png)
+
+连接成功后可以查看连接详情、5 个只读工具，并调整自动表达：
+
+![已连接与自动表达](docs/screenshots/02-settings-connected.png)
+
+- 使用频率：克制 / 自然 / 活跃；
+- 触发场景：开心、吐槽、无语、庆祝、安慰、打招呼、拒绝、其他，可自由勾选；
+- **严肃场景配图**：工作、技术讨论、代码、会议等场景是否允许配图，默认关闭；
+- 每轮最多 1 张、不替代文字；是否配图仍由模型自主判断。
+
+暗色模式跟随 DSH 主题：
+
+![暗色模式](docs/screenshots/03-settings-connected-dark.png)
+
+> 截图使用示例数据（地址 `https://memes.example.com`，令牌为假掩码），实际地址与令牌以本机配置为准。
+
 ## 安装
 
 把本仓库作为 bundle 安装到当前 DSH profile：
@@ -52,7 +73,7 @@ icon.svg              插件图标
 README.md             本文件
 ```
 
-设计稿、截图、交接文档不参与运行时，默认不随仓库上传（见 `.gitignore`）。
+`docs/screenshots/` 仅用于 README 展示，不参与运行时。设计稿与交接文档不参与运行时，默认不随仓库上传（见 `.gitignore`）。
 
 ## 开发
 
