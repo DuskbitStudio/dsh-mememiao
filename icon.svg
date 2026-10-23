@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="MeMeMio 表情包">
+  <defs>
+    <linearGradient id="g" x1="10" y1="8" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5b95ff"/>
+      <stop offset="0.6" stop-color="#2f6fed"/>
+      <stop offset="1" stop-color="#1f4fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <path d="M15 25.5a12.5 12.5 0 0 1 12.5-12.5h9A12.5 12.5 0 0 1 49 25.5v4A12.5 12.5 0 0 1 36.5 42H30l-8.5 7v-7.6A12.5 12.5 0 0 1 15 29.5z" fill="#fff"/>
+  <circle cx="26" cy="27" r="2.2" fill="#2f6fed"/>
+  <circle cx="32" cy="27" r="2.2" fill="#2f6fed"/>
+  <circle cx="38" cy="27" r="2.2" fill="#2f6fed"/>
+  <path d="M25 33.5c2 2.2 4.3 3.3 7 3.3s5-1.1 7-3.3" fill="none" stroke="#2f6fed" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,48 @@
+﻿# dsh-mememiao：Host 行 + 预置 MCP 行。
+# MCP 行默认 disabled；用户在设置页连接后由 Host 用 pluginManager 打开。
+- insert:
+    - id: dsh-mememiao
+      name: dsh-mememiao
+
+    - id: mememio-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      disabled: true
+      config:
+        serverName: mememio
+        transport: streamable-http
+        url: !!js >-
+          (() => {
+            try {
+              const fs = process.getBuiltinModule('node:fs');
+              const path = process.getBuiltinModule('node:path');
+              const os = process.getBuiltinModule('node:os');
+              const home = process.env.DSH_HOME || (os.homedir() + '/.dsh');
+              const cfg = JSON.parse(fs.readFileSync(path.join(home, 'secrets', 'mememio.json'), 'utf8'));
+              const base = String(cfg.baseUrl || 'https://memes.example.com').replace(/\/+$/, '');
+              return base.endsWith('/mcp') ? base : base + '/mcp';
+            } catch {
+              return 'https://memes.example.com/mcp';
+            }
+          })()
+        headers:
+          Authorization: !!js >-
+            (() => {
+              try {
+                const fs = process.getBuiltinModule('node:fs');
+                const path = process.getBuiltinModule('node:path');
+                const os = process.getBuiltinModule('node:os');
+                const home = process.env.DSH_HOME || (os.homedir() + '/.dsh');
+                const cfg = JSON.parse(fs.readFileSync(path.join(home, 'secrets', 'mememio.json'), 'utf8'));
+                return 'Bearer ' + String(cfg.token || '');
+              } catch {
+                return 'Bearer ';
+              }
+            })()
+        toolCallTimeoutMs: 60000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          initialDelayMs: 1000
+          maxDelayMs: 30000
+          maxAttempts: 20
+

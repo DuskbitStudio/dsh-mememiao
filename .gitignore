@@ -1,0 +1,23 @@
+# 依赖与打包产物
+node_modules/
+*.tgz
+*.log
+
+# 本机密钥/配置：绝不提交
+secrets/
+.env
+.env.*
+mememio.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 开发交接与设计素材：不参与运行时，默认不随仓库上传。
+# 需要把设计稿/截图一起发布时，删除下面两行即可。
+HANDOFF.md
+design/
+
+# 本地上传清单
+upload-to-github-manifest.txt
