@@ -1,8 +1,8 @@
-﻿# dsh-mememiao：Host 行 + 预置 MCP 行。
+﻿# dsh-mememio：Host 行 + 预置 MCP 行。
 # MCP 行默认 disabled；用户在设置页连接后由 Host 用 pluginManager 打开。
 - insert:
-    - id: dsh-mememiao
-      name: dsh-mememiao
+    - id: dsh-mememio
+      name: dsh-mememio
 
     - id: mememio-mcp
       name: '@deepseek-ai/dsh-mcp-client'

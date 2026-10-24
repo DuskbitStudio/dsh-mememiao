@@ -2,8 +2,8 @@ import { chmodSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'n
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 
-const NAME = 'dsh-mememiao'
-const ROUTE_PREFIX = '/api/dsh-mememiao'
+const NAME = 'dsh-mememio'
+const ROUTE_PREFIX = '/api/dsh-mememio'
 const SCENES = ['开心', '吐槽', '无语', '庆祝', '安慰', '打招呼', '拒绝', '其他']
 const FREQUENCIES = ['subtle', 'natural', 'active']
 const DEFAULT_SCENES = ['开心', '吐槽', '无语', '庆祝', '安慰']
@@ -180,7 +180,7 @@ async function probeMcp(baseUrl, token) {
         params: {
           _meta: {
             'io.modelcontextprotocol/protocolVersion': '2026-07-28',
-            'io.modelcontextprotocol/clientInfo': { name: 'dsh-mememiao', version: '0.1.0' },
+            'io.modelcontextprotocol/clientInfo': { name: 'dsh-mememio', version: '0.1.0' },
             'io.modelcontextprotocol/clientCapabilities': {},
           },
         },

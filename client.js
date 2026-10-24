@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: 'dsh-mememiao',
+  id: 'dsh-mememio',
   factory(require) {
     const React = require('react')
     const { useEffect, useState } = React
@@ -58,7 +58,7 @@ window.__ModuleLoader__.load({
     `
 
     async function call(path, options) {
-      const response = await fetch(`/api/dsh-mememiao/${path}`, {
+      const response = await fetch(`/api/dsh-mememio/${path}`, {
         credentials: 'same-origin',
         ...options,
         headers: { 'content-type': 'application/json', ...(options?.headers || {}) },

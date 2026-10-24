@@ -1,4 +1,4 @@
-# dsh-mememiao
+# dsh-mememio
 
 把 MeMeMio 的只读表情包 MCP 接入 DSH：在设置页填站点地址和只读令牌，连接后模型在情绪回复时会自主挑图。
 
@@ -82,13 +82,13 @@ node --check index.js
 node --check client.js
 ```
 
-- 改 Host（`index.js`）后，重载 `include:dsh-mememiao` 行生效。
+- 改 Host（`index.js`）后，重载 `include:dsh-mememio` 行生效。
 - 改 Client（`client.js`）后，刷新/重开设置页生效。
 
 ## 卸载
 
 ```text
-plugin_manager action=remove_bundle target=dsh-mememiao
+plugin_manager action=remove_bundle target=dsh-mememio
 ```
 
 会同时移除 bundle 内的 Host 行和 MCP 行。
